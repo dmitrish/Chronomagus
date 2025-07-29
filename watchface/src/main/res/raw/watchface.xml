@@ -17,49 +17,49 @@
         </PartDraw>
 
         <!-- 12 o'clock - keep original position as reference -->
-        <PartText x="207" y="47" width="40" height="30">
+        <PartText x="207" y="30" width="40" height="60">
             <Text align="CENTER">
-                <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">12</Font>
+                <Font family="tulpenoneregular" size="60" weight="BLACK" color="#FF2C2C2C">12</Font>
             </Text>
         </PartText>
 
         <!-- 2 o'clock (60° from 12) - rotated to point toward center -->
-        <Group id="2" x="363" y="121" width="40" height="30" angle="60">
-            <PartText x="0" y="0" width="40" height="30">
+        <Group id="2" x="363" y="121" width="40" height="60" angle="60">
+            <PartText x="0" y="0" width="40" height="60">
                 <Text align="CENTER">
-                    <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">2</Font>
+                    <Font family="tulpenoneregular" size="60" weight="BLACK" color="#FF2C2C2C">2</Font>
                 </Text>
             </PartText>
         </Group>
 
         <!-- 4 o'clock (120° from 12) - rotated to point toward center -->
-        <Group id="4" x="363" y="301" width="40" height="30" angle="120">
-            <PartText x="0" y="0" width="40" height="30">
+        <Group id="4" x="351" y="301" width="40" height="60" angle="120">
+            <PartText x="0" y="0" width="40" height="60">
                 <Text align="CENTER">
-                    <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">4</Font>
+                    <Font family="tulpenoneregular" size="60" weight="BOLD" color="#FF2C2C2C">4</Font>
                 </Text>
             </PartText>
         </Group>
 
         <!-- 8 o'clock (240° from 12) - rotated to point toward center -->
-        <Group id="8" x="51" y="301" width="40" height="30" angle="240">
-            <PartText x="0" y="0" width="40" height="30">
+        <Group id="8" x="62" y="301" width="40" height="60" angle="240">
+            <PartText x="0" y="0" width="40" height="60">
                 <Text align="CENTER">
-                    <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">8</Font>
+                    <Font family="tulpenoneregular" size="60" weight="BOLD" color="#FF2C2C2C">8</Font>
                 </Text>
             </PartText>
         </Group>
 
         <!-- 10 o'clock (300° from 12) - rotated to point toward center -->
-        <Group id="10" x="51" y="121" width="40" height="30" angle="300">
-            <PartText x="0" y="0" width="40" height="30">
+        <Group id="10" x="51" y="121" width="40" height="60" angle="300">
+            <PartText x="0" y="0" width="40" height="60">
                 <Text align="CENTER">
-                    <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">10</Font>
+                    <Font family="tulpenoneregular" size="60" weight="BOLD" color="#FF2C2C2C">10</Font>
                 </Text>
             </PartText>
         </Group>
 
-        <!-- Radial line markers for remaining hours (FINE-TUNED ADJUSTMENTS) -->
+        <!-- Radial line markers for remaining hours (CORRECTED POSITIONS) -->
         <!-- 1 o'clock - small adjustment back toward center from previous overcorrection -->
         <Group id="1" x="300" y="90" width="10" height="30" angle="30">
             <PartDraw x="0" y="0" width="2" height="8">
@@ -102,7 +102,7 @@
             </PartDraw>
         </Group>
 
-        <!-- 7 o'clock - KEEP AS IS (this one is correct) -->
+        <!-- 7 o'clock - CORRECT POSITION (reference) -->
         <Group id="7" x="129" y="339" width="10" height="30" angle="210">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
@@ -117,7 +117,7 @@
         </Group>
 
         <!-- 9 o'clock - keep current position -->
-        <Group id="9" x="51" y="211" width="10" height="30" angle="270">
+        <Group id="9" x="42" y="211" width="10" height="30" angle="270">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
                     <Fill color="#FF2C2C2C" />
