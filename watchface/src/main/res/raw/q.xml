@@ -16,15 +16,6 @@
       </Ellipse>
     </PartDraw>
 
-    <!--
-    Correct Mathematical positioning based on 12 o'clock reference:
-    - Watch face center: (227, 227)
-    - Text center for 12 o'clock: (227, 47) - this gives us the radius = 180
-    - For numerals: position text boxes so their centers are at the calculated points
-    - For dots: position small circles directly at the calculated points
-    - Angles in radians: 12=4.71, 1=5.24, 2=5.76, 3=0, 4=0.52, 5=1.05, 6=1.57, 7=2.09, 8=2.62, 9=3.14, 10=3.67, 11=4.19
-    -->
-
     <!-- 12 o'clock - keep original position as reference -->
     <PartText x="207" y="47" width="40" height="30">
       <Text align="CENTER">
@@ -33,124 +24,125 @@
     </PartText>
 
     <!-- 2 o'clock (60° from 12) - rotated to point toward center -->
-    <Group id="12" x="363" y="121" width="49" height="30" angle="55">
+    <Group id="2" x="363" y="121" width="40" height="30" angle="60">
       <PartText x="0" y="0" width="40" height="30">
         <Text align="CENTER">
           <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">2</Font>
         </Text>
       </PartText>
-      <!--<PartText x="363" y="121" width="40" height="30">
-      <Transform>
-        <Rotate angle="60" pivotX="20" pivotY="15" />
-      </Transform>
-      <Text align="CENTER">
-        <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">2</Font>
-      </Text>
-    </PartText>-->
     </Group>
 
     <!-- 4 o'clock (120° from 12) - rotated to point toward center -->
-    <PartText x="363" y="301" width="40" height="30">
-      <Transform>
-        <Rotate angle="120" pivotX="20" pivotY="15" />
-      </Transform>
-      <Text align="CENTER">
-        <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">4</Font>
-      </Text>
-    </PartText>
+    <Group id="4" x="363" y="301" width="40" height="30" angle="120">
+      <PartText x="0" y="0" width="40" height="30">
+        <Text align="CENTER">
+          <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">4</Font>
+        </Text>
+      </PartText>
+    </Group>
 
     <!-- 8 o'clock (240° from 12) - rotated to point toward center -->
-    <PartText x="51" y="301" width="40" height="30">
-      <Transform>
-        <Rotate angle="240" pivotX="20" pivotY="15" />
-      </Transform>
-      <Text align="CENTER">
-        <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">8</Font>
-      </Text>
-    </PartText>
+    <Group id="8" x="51" y="301" width="40" height="30" angle="240">
+      <PartText x="0" y="0" width="40" height="30">
+        <Text align="CENTER">
+          <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">8</Font>
+        </Text>
+      </PartText>
+    </Group>
 
     <!-- 10 o'clock (300° from 12) - rotated to point toward center -->
-    <PartText x="51" y="121" width="40" height="30">
-      <Transform>
-        <Rotate angle="300" pivotX="20" pivotY="15" />
-      </Transform>
-      <Text align="CENTER">
-        <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">10</Font>
-      </Text>
-    </PartText>
+    <Group id="10" x="51" y="121" width="40" height="30" angle="300">
+      <PartText x="0" y="0" width="40" height="30">
+        <Text align="CENTER">
+          <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">10</Font>
+        </Text>
+      </PartText>
+    </Group>
 
-    <!-- Simple line markers for remaining hours at radius 180 -->
-    <!-- 1 o'clock (30° from 12) -->
-    <PartDraw x="314" y="68" width="2" height="1">
-      <Rectangle x="0" y="0" width="2" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
-    <PartDraw x="318" y="68" width="6" height="1">
-      <Rectangle x="0" y="0" width="6" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
+    <!-- Radial line markers for remaining hours -->
+    <!-- 1 o'clock (30° from 12) - adjusted to match 3&9 distance from edge -->
+    <Group id="1" x="350" y="100" width="10" height="30" angle="30">
+      <PartDraw x="0" y="0" width="2" height="8">
+        <Rectangle x="0" y="0" width="2" height="8">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="10" width="2" height="16">
+        <Rectangle x="0" y="0" width="2" height="16">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+    </Group>
 
-    <!-- 3 o'clock (90° from 12) -->
-    <PartDraw x="405" y="223" width="1" height="2">
-      <Rectangle x="0" y="0" width="1" height="2">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
-    <PartDraw x="405" y="227" width="1" height="6">
-      <Rectangle x="0" y="0" width="1" height="6">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
+    <!-- 3 o'clock (90° from 12) - keep at correct distance -->
+    <Group id="3" x="405" y="223" width="10" height="30" angle="90">
+      <PartDraw x="0" y="0" width="2" height="8">
+        <Rectangle x="0" y="0" width="2" height="8">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="10" width="2" height="16">
+        <Rectangle x="0" y="0" width="2" height="16">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+    </Group>
 
-    <!-- 5 o'clock (150° from 12) -->
-    <PartDraw x="314" y="382" width="2" height="1">
-      <Rectangle x="0" y="0" width="2" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
-    <PartDraw x="318" y="382" width="6" height="1">
-      <Rectangle x="0" y="0" width="6" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
+    <!-- 5 o'clock (150° from 12) - adjusted to match 3&9 distance from edge -->
+    <Group id="5" x="350" y="350" width="10" height="30" angle="150">
+      <PartDraw x="0" y="0" width="2" height="8">
+        <Rectangle x="0" y="0" width="2" height="8">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="10" width="2" height="16">
+        <Rectangle x="0" y="0" width="2" height="16">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+    </Group>
 
-    <!-- 7 o'clock (210° from 12) -->
-    <PartDraw x="134" y="382" width="2" height="1">
-      <Rectangle x="0" y="0" width="2" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
-    <PartDraw x="138" y="382" width="6" height="1">
-      <Rectangle x="0" y="0" width="6" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
+    <!-- 7 o'clock (210° from 12) - adjusted to match 3&9 distance from edge -->
+    <Group id="7" x="100" y="350" width="10" height="30" angle="210">
+      <PartDraw x="0" y="0" width="2" height="8">
+        <Rectangle x="0" y="0" width="2" height="8">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="10" width="2" height="16">
+        <Rectangle x="0" y="0" width="2" height="16">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+    </Group>
 
-    <!-- 9 o'clock (270° from 12) -->
-    <PartDraw x="47" y="223" width="1" height="2">
-      <Rectangle x="0" y="0" width="1" height="2">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
-    <PartDraw x="47" y="227" width="1" height="6">
-      <Rectangle x="0" y="0" width="1" height="6">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
+    <!-- 9 o'clock (270° from 12) - keep at correct distance -->
+    <Group id="9" x="47" y="223" width="10" height="30" angle="270">
+      <PartDraw x="0" y="0" width="2" height="8">
+        <Rectangle x="0" y="0" width="2" height="8">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="10" width="2" height="16">
+        <Rectangle x="0" y="0" width="2" height="16">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+    </Group>
 
-    <!-- 11 o'clock (330° from 12) -->
-    <PartDraw x="134" y="68" width="2" height="1">
-      <Rectangle x="0" y="0" width="2" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
-    <PartDraw x="138" y="68" width="6" height="1">
-      <Rectangle x="0" y="0" width="6" height="1">
-        <Fill color="#FF2C2C2C" />
-      </Rectangle>
-    </PartDraw>
+    <!-- 11 o'clock (330° from 12) - adjusted to match 3&9 distance from edge -->
+    <Group id="11" x="100" y="100" width="10" height="30" angle="330">
+      <PartDraw x="0" y="0" width="2" height="8">
+        <Rectangle x="0" y="0" width="2" height="8">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="10" width="2" height="16">
+        <Rectangle x="0" y="0" width="2" height="16">
+          <Fill color="#FF2C2C2C" />
+        </Rectangle>
+      </PartDraw>
+    </Group>
 
     <!-- Brand Text -->
     <PartText x="152" y="90" width="150" height="20">
