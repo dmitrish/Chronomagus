@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="454" height="454">
+  <Scene>
+
+    <!-- Clean white background -->
+    <PartDraw x="0" y="0" width="454" height="454">
+      <Ellipse x="0" y="0" width="454" height="454">
+        <Fill color="#FFFFFFFF" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- Railway minute track (thin outer ring) -->
+    <PartDraw x="0" y="0" width="454" height="454">
+      <Ellipse x="15" y="15" width="424" height="424">
+        <Stroke color="#FFCCCCCC" width="0.5" />
+      </Ellipse>
+    </PartDraw>
+
+    <!--
+    Correct Mathematical positioning based on 12 o'clock reference:
+    - Watch face center: (227, 227)
+    - Text center for 12 o'clock: (227, 47) - this gives us the radius = 180
+    - For numerals: position text boxes so their centers are at the calculated points
+    - For dots: position small circles directly at the calculated points
+    - Angles in radians: 12=4.71, 1=5.24, 2=5.76, 3=0, 4=0.52, 5=1.05, 6=1.57, 7=2.09, 8=2.62, 9=3.14, 10=3.67, 11=4.19
+    -->
+
+    <!-- 12 o'clock - keep original position as reference -->
+    <PartText x="207" y="47" width="40" height="30">
+      <Text align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">12</Font>
+      </Text>
+    </PartText>
+
+    <!-- 3 o'clock (0°) - radius 180, center (227,227) -->
+    <PartText x="387" y="212" width="40" height="30">
+      <Text align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">3</Font>
+      </Text>
+    </PartText>
+
+    <!-- 9 o'clock (180°) - radius 180, center (227,227) -->
+    <PartText x="27" y="212" width="40" height="30">
+      <Text align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="36" color="#FF2C2C2C">9</Font>
+      </Text>
+    </PartText>
+
+    <!-- Simple dot markers for remaining hours at radius 180 -->
+    <!-- 1 o'clock (30° from 12) - x=227+180*sin(30°)=227+90=317, y=227-180*cos(30°)=227-156=71 -->
+    <PartDraw x="316" y="70" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- 2 o'clock (60° from 12) - x=227+180*sin(60°)=227+156=383, y=227-180*cos(60°)=227-90=137 -->
+    <PartDraw x="382" y="136" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- 4 o'clock (120° from 12) - x=227+180*sin(120°)=227+156=383, y=227-180*cos(120°)=227+90=317 -->
+    <PartDraw x="382" y="316" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- 5 o'clock (150° from 12) - x=227+180*sin(150°)=227+90=317, y=227-180*cos(150°)=227+156=383 -->
+    <PartDraw x="316" y="382" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- 7 o'clock (210° from 12) - x=227+180*sin(210°)=227-90=137, y=227-180*cos(210°)=227+156=383 -->
+    <PartDraw x="136" y="382" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- 8 o'clock (240° from 12) - x=227+180*sin(240°)=227-156=71, y=227-180*cos(240°)=227+90=317 -->
+    <PartDraw x="70" y="316" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- 10 o'clock (300° from 12) - x=227+180*sin(300°)=227-156=71, y=227-180*cos(300°)=227-90=137 -->
+    <PartDraw x="70" y="136" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- 11 o'clock (330° from 12) - x=227+180*sin(330°)=227-90=137, y=227-180*cos(330°)=227-156=71 -->
+    <PartDraw x="136" y="70" width="3" height="3">
+      <Ellipse x="0" y="0" width="3" height="3">
+        <Fill color="#FF2C2C2C" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- Brand Text -->
+    <PartText x="152" y="90" width="150" height="20">
+      <Text align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="12" color="#FF2C2C2C">NOMOS</Font>
+      </Text>
+    </PartText>
+
+    <PartText x="152" y="110" width="150" height="20">
+      <Text align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="9" color="#FF666666">GLASHUTTE</Font>
+      </Text>
+    </PartText>
+
+    <!-- Model name below center -->
+    <PartText x="152" y="280" width="150" height="20">
+      <Text align="CENTER">
+        <Font family="SYNC_TO_DEVICE" size="9" color="#FF666666">TANGENTE</Font>
+      </Text>
+    </PartText>
+
+    <!-- Subsecond dial at 6 o'clock (smaller and positioned properly) -->
+    <PartDraw x="197" y="337" width="60" height="60">
+      <Ellipse x="0" y="0" width="60" height="60">
+        <Stroke color="#FF999999" width="1" />
+        <Fill color="#FFFFFFFF" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- Subsecond markers (adjusted for smaller dial) -->
+    <PartDraw x="226" y="342" width="2" height="6">
+      <Rectangle x="0" y="0" width="2" height="6">
+        <Fill color="#FF999999" />
+      </Rectangle>
+    </PartDraw>
+
+    <PartDraw x="249" y="366" width="6" height="2">
+      <Rectangle x="0" y="0" width="6" height="2">
+        <Fill color="#FF999999" />
+      </Rectangle>
+    </PartDraw>
+
+    <PartDraw x="226" y="389" width="2" height="6">
+      <Rectangle x="0" y="0" width="2" height="6">
+        <Fill color="#FF999999" />
+      </Rectangle>
+    </PartDraw>
+
+    <PartDraw x="201" y="366" width="6" height="2">
+      <Rectangle x="0" y="0" width="6" height="2">
+        <Fill color="#FF999999" />
+      </Rectangle>
+    </PartDraw>
+
+    <!-- Main Clock Hands -->
+    <AnalogClock x="0" y="0" width="454" height="454">
+
+      <!-- Hour Hand -->
+      <HourHand resource="hour"
+                x="222" y="137" width="8" height="90"
+                pivotX="0.5" pivotY="1.0"
+                tintColor="#FF1E3A8A" />
+
+      <!-- Minute Hand -->
+      <MinuteHand resource="minute"
+                  x="224" y="92" width="4" height="135"
+                  pivotX="0.5" pivotY="1.0"
+                  tintColor="#FF1E3A8A" />
+
+    </AnalogClock>
+
+    <!-- Center dot -->
+    <PartDraw x="223" y="223" width="8" height="8">
+      <Ellipse x="0" y="0" width="8" height="8">
+        <Fill color="#FF1E3A8A" />
+      </Ellipse>
+    </PartDraw>
+
+    <!-- Subsecond hand (adjusted for smaller dial) -->
+    <AnalogClock x="197" y="337" width="60" height="60">
+      <SecondHand resource="second"
+                  x="29" y="10" width="2" height="20"
+                  pivotX="0.5" pivotY="1.0"
+                  tintColor="#FF1E3A8A">
+        <Variant mode="AMBIENT" target="alpha" value="0" />
+        <Sweep frequency="1" />
+      </SecondHand>
+    </AnalogClock>
+
+    <!-- Subsecond center dot (adjusted position) -->
+    <PartDraw x="225" y="365" width="4" height="4">
+      <Ellipse x="0" y="0" width="4" height="4">
+        <Fill color="#FF1E3A8A" />
+      </Ellipse>
+    </PartDraw>
+
+  </Scene>
+</WatchFace>
