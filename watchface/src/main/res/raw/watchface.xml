@@ -42,7 +42,7 @@
         </Group>
 
         <!-- 8 o'clock (240° from 12) - rotated to point toward center -->
-        <Group id="8" x="62" y="301" width="40" height="60" angle="240">
+        <Group id="8" x="52" y="281" width="40" height="60" angle="240">
             <PartText x="0" y="0" width="40" height="60">
                 <Text align="CENTER">
                     <Font family="tulpenoneregular" size="60" weight="BOLD" color="#FF2C2C2C">8</Font>
@@ -103,7 +103,7 @@
         </Group>
 
         <!-- 7 o'clock - CORRECT POSITION (reference) -->
-        <Group id="7" x="129" y="369" width="10" height="30" angle="210">
+        <Group id="7" x="90" y="339" width="10" height="30" angle="230">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
                     <Fill color="#FF2C2C2C" />
