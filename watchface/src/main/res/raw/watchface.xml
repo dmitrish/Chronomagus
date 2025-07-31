@@ -61,7 +61,7 @@
 
         <!-- Radial line markers for remaining hours (CORRECTED POSITIONS) -->
         <!-- 1 o'clock - small adjustment back toward center from previous overcorrection -->
-        <Group id="1" x="300" y="90" width="10" height="30" angle="30">
+        <Group id="1" x="335" y="62" width="10" height="3" angle="35">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
                     <Fill color="#FF2C2C2C" />
@@ -75,7 +75,7 @@
         </Group>
 
         <!-- 3 o'clock - keep current position -->
-        <Group id="3" x="363" y="211" width="10" height="30" angle="90">
+        <Group id="3" x="400" y="211" width="10" height="30" angle="90">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
                     <Fill color="#FF2C2C2C" />
@@ -89,7 +89,7 @@
         </Group>
 
         <!-- 5 o'clock - small adjustment back toward center from previous overcorrection -->
-        <Group id="5" x="300" y="325" width="10" height="30" angle="150">
+        <Group id="5" x="300" y="375" width="10" height="30" angle="150">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
                     <Fill color="#FF2C2C2C" />
@@ -103,7 +103,7 @@
         </Group>
 
         <!-- 7 o'clock - CORRECT POSITION (reference) -->
-        <Group id="7" x="129" y="339" width="10" height="30" angle="210">
+        <Group id="7" x="129" y="369" width="10" height="30" angle="210">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
                     <Fill color="#FF2C2C2C" />
@@ -131,7 +131,7 @@
         </Group>
 
         <!-- 11 o'clock - small adjustment back toward center since it's now too close to 12 -->
-        <Group id="11" x="140" y="75" width="10" height="30" angle="330">
+        <Group id="11" x="130" y="55" width="10" height="30" angle="330">
             <PartDraw x="0" y="0" width="2" height="8">
                 <Rectangle x="0" y="0" width="2" height="8">
                     <Fill color="#FF2C2C2C" />
